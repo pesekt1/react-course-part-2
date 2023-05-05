@@ -15,12 +15,12 @@ const TodoList = () => {
       .then((res) => res.data);
   };
 
-  const { data: todos } = useQuery({
+  const { data: todos, error } = useQuery<Todo[], Error>({
     queryKey: ["todos"],
     queryFn: () => fetchTodos(),
   });
 
-  //if (error) return <p>{error}</p>;
+  if (error) return <p>{error.message}</p>;
 
   return (
     <ul className="list-group">
