@@ -1,7 +1,7 @@
 import { useState } from "react";
 import usePosts from "./hooks/usePosts";
 
-const PostList = () => {
+const PostListParameterized = () => {
   const [userId, setUserId] = useState<number>();
 
   const { data: posts, error, isLoading } = usePosts(userId);
@@ -34,4 +34,4 @@ const PostList = () => {
   );
 };
 
-export default PostList;
+export default PostListParameterized;
