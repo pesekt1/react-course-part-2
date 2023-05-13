@@ -1,7 +1,7 @@
 import useCounterStore from "./store";
 
 const Counter = () => {
-  const { counter, increment, reset } = useCounterStore();
+  const { counter, increment, reset, setMax } = useCounterStore();
 
   return (
     <div>
@@ -11,6 +11,9 @@ const Counter = () => {
       </button>
       <button onClick={() => reset()} className="btn btn-primary mx-1">
         Reset
+      </button>
+      <button onClick={() => setMax(10)} className="btn btn-primary mx-1">
+        Set Max
       </button>
     </div>
   );
