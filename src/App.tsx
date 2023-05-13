@@ -9,18 +9,15 @@ import LoginStatus from "./state-management/auth/LoginStatus";
 import TaskList from "./state-management/tasks/TaskList";
 import NavBar from "./state-management/NavBar";
 import HomePage from "./state-management/HomePage";
-import { AuthProvider } from "./state-management/auth";
 import { TasksProvider } from "./state-management/tasks";
 
 function App() {
   return (
-    <AuthProvider>
-      <TasksProvider>
-        <NavBar />
-        <Counter />
-        <HomePage />
-      </TasksProvider>
-    </AuthProvider>
+    <TasksProvider>
+      <NavBar />
+      <Counter />
+      <HomePage />
+    </TasksProvider>
   );
 }
 
